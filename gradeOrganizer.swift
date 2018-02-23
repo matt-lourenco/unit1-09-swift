@@ -12,8 +12,8 @@ srand(UInt32(time(nil)))
 
 func randomSkewedNumber()->Int {
 	//This method generates two random numbers and returns the larger one
-	var randomNumber1: Int = Int(random()%(99) + 1)
-	var randomNumber2: Int = Int(random()%(99) + 1)
+	var randomNumber1: Int = Int(random()%(100) + 1)
+	var randomNumber2: Int = Int(random()%(100) + 1)
 	if randomNumber1>randomNumber2 {
 		return randomNumber1
 	} else {
@@ -58,9 +58,9 @@ for student in 0..<4 {
 }
 
 //print each student's score
-for student in 0..<classroom.count {
+for student in 1...classroom.count {
 	print("Student \(student):", terminator: "")
-	for assignment in classroom[student] {
+	for assignment in classroom[student-1] {
 		print(" \(Int(assignment))", terminator: "")
 	}
 	print("")
