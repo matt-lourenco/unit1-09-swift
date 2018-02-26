@@ -12,8 +12,8 @@ srand(UInt32(time(nil)))
 
 func randomSkewedNumber()->Int {
 	//This method generates two random numbers and returns the larger one
-	var randomNumber1: Int = Int(random()%(100))
-	var randomNumber2: Int = Int(random()%(100))
+	var randomNumber1: Int = Int(random()%(101))
+	var randomNumber2: Int = Int(random()%(101))
 	if randomNumber1>randomNumber2 {
 		return randomNumber1
 	} else {
